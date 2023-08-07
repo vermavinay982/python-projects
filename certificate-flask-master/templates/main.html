@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<!-- <meta http-equiv="refresh" content="1"> -->
+	<title>ROI Selector</title>
+	
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style.css')}}">
+	<link rel="stylesheet" href="style.css">
+	<script src='main.js'></script>
+	
+</head>
+
+<body id="bg">
+	<!-- <center> -->
+		<table>
+			<tr>
+				
+				<td align="left" width="40%">
+					<center><form id="drawpoly">
+						<table id="format">
+							<tr id="row1" >
+								<td colspan="2">
+									<p class="p">*You have to fill all details to submit form.</p>
+								</td>
+							</tr>
+							<!-- <tr id="row2"><th>Polygon Side:</th>
+								<td><input type="radio" name="sides" id="c1" value="inside" required /> Inside
+									<input type="radio" name="sides" id="c2" value="outside" required/> Outside</td>
+								</tr> -->
+								<tr id="roi">
+									<th>Camera RTSP: </th>
+									<td><input type="text" id="cam" required="required"/><br/></td>
+								</tr>
+								<tr id="usecase">
+									<th>Location: </th>
+									<td><input type="text" id="loc" required="required"/><br/></td>
+								</tr>
+								<tr id="row4">
+									<td colspan="2">
+										<canvas id="myImgId" width="500" height="320" style="border:1px solid #c41212;background-image: url('img1.png');background-size: 500px 320px;"></canvas>
+										<script type="text/javascript">
+											var coordinates = [];
+											var text = "";
+											var all_coordinate = [];
+											var all_btnid = [];
+											var btnid = 1;
+											var btnids = [];
+											var myImg = document.getElementById("myImgId");
+											myImg.onmousedown = GetCoordinates;
+											var txtbx = document.createElement("input");
+											txtbx.type = "textbox";
+										</script>
+									</td>
+								</tr>
+								<tr id="row5">
+									<td colspan="2">
+										<p class="p">*Click on picture to mark points of polygon.</p>
+									</td>
+								</tr>
+								<tr id="row6">
+									<th>X: <span id="x"></span>   Y: <span id="y"></span>
+									</th>
+									<th id="info"></th>
+								</tr>
+							</table>
+							
+							<p id="add">             
+								<script type="text/javascript">
+									
+									coordinatex = document.getElementById('x').innerHTML;
+									coordinatey = document.getElementById('y').innerHTML;
+								</script>
+							</p>
+							<center><input type="button" class="button1" value="DELETE RECENT COORDINATE" id="pointsdelete" onclick="delete_coordinate(coordinatex, coordinatey);"/></center>
+							<center><input type="button" value="ADD TO TABLE" class="button" onclick="writeName();"/></td></center>
+						</form></center>
+					</td>
+					
+					<td width="60%" align="left">
+						<center><table id="myTable" class="csvtable" align="top">
+							<caption><b><u>Table</u></b></caption>
+							<tr>
+								<th>ID</th>
+								<th>Camera Name</th>
+								<th>Location</th>
+								<th>Co-ordinates</th>
+								<th>Delete</th>
+							</tr>
+						</table>
+						
+						<button class="button" onclick="exportTableToCSV('members.csv')">Export HTML Table To CSV File</button>
+					</center>
+				</td>
+			</tr>
+		</table>
+	</center>
+</body>
+</html>

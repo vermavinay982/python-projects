@@ -1,0 +1,2 @@
+# Essay-Shortener-Python
+This code as said shorts the essay and finds the values that have impact on the whole article removing all the waste stuffs  It allows us to read the topics faster and efficiently by shortening the essay which is provided to it. It uses NLP and ML to do that. If anyone wants to use this program then he can get it by mailing to vermavinay982@gmail.com I will send you the full code then  If having some doubts how it works or anything can ask that in comments
