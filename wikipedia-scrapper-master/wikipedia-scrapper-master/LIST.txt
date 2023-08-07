@@ -1,3 +1,0 @@
-smiley,3
-picture,3
-facebook,5
